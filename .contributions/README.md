@@ -33,4 +33,4 @@ The combined branch passed all 4,104 UI tests after adding the plugin form contr
 
 Source review, tests and browser checks found no remaining defect in these changes. That is evidence for review readiness, not a guarantee that no bug can exist.
 
-PR #3009 is mergeable and contains only accessories.service.ts and its tests. The label workflows passed. The Node Build run has no jobs and reports `action_required`; hosted build verification is still pending.
+PR #3009 is mergeable and contains only accessories.service.ts and its tests. The label workflows passed. GitHub confirms that Node Build is awaiting maintainer approval for the fork PR. Hosted build verification is still pending.
