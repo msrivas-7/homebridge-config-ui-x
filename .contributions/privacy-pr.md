@@ -6,7 +6,7 @@ JSON Config shows credentials as soon as it opens. Start with a read only previe
 
 Keep the original config separate from the preview and prevent saving while it is masked. Hiding and revealing retains unsaved edits, including edited backup comparisons. Invalid JSON shows a message instead of exposing raw text.
 
-Verified with 93 focused tests on this branch, build and lint. All 4,104 UI tests pass with the three UI contributions combined. The Codex browser run covers keyboard controls, a narrow viewport, editing, save integrity, reload, backup comparison and unsaved changes. All data and accounts used for testing are synthetic.
+Verified with 93 focused tests on this branch, build and lint. All 4,104 UI tests pass with the three UI contributions combined. The local browser run covers keyboard controls, a narrow viewport, editing, save integrity, reload, backup comparison and unsaved changes. All data and accounts used for testing are synthetic.
 
 This is display masking. Unusual secret fields can be missed, and config.json, API responses, backups and logs remain unchanged.
 

@@ -46,7 +46,7 @@ UIX_SERVICE_MODE=0 UIX_INSECURE_MODE=1 \
 node --import ./.contributions/browser/fixture-discovery.mjs dist/main.js
 ```
 
-Open `http://127.0.0.1:18781` in the Codex browser. The discovery preload seeds only the loopback fixture; HAP reads, writes, monitoring, UI authentication and layout persistence are real. The fixture suppresses LAN advertisements and forces the HAP listener to loopback. Check both listeners with `lsof` before testing. Do not pair this test bridge with Apple Home.
+Open `http://127.0.0.1:18781` in the local browser. The discovery preload seeds only the loopback fixture; HAP reads, writes, monitoring, UI authentication and layout persistence are real. The fixture suppresses LAN advertisements and forces the HAP listener to loopback. Check both listeners with `lsof` before testing. Do not pair this test bridge with Apple Home.
 
 ## Outlet journey
 
@@ -69,7 +69,7 @@ Open `http://127.0.0.1:18781` in the Codex browser. The discovery preload seeds 
 
 ## Observed results
 
-Outlet rename, persistence, commands, offline retention and reconnect passed in the Codex browser. Real HAP payloads confirmed matching name identifiers but different serials. Saved configuration and backup edits retained the dummy credentials without redaction markers. Hidden unsaved edits produced the discard prompt.
+Outlet rename, persistence, commands, offline retention and reconnect passed in the local browser. Real HAP payloads confirmed matching name identifiers but different serials. Saved configuration and backup edits retained the dummy credentials without redaction markers. Hidden unsaved edits produced the discard prompt.
 
 The first fixture reconnect attempt failed because HAP controller storage cannot reattach the same object. The fixture now creates a fresh accessory with the same UUID; the repeated cycle passed. Initial browser requests also found missing fixture storage directories. Creating the normal empty directories resolved those setup errors. These were test setup problems, not production changes.
 
