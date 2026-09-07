@@ -1,0 +1,32 @@
+{
+  "pluginAlias": "Example",
+  "pluginType": "platform",
+  "singular": true,
+  "strictValidation": true,
+  "schema": {
+    "type": "object",
+    "required": [
+      "password"
+    ],
+    "properties": {
+      "name": {
+        "title": "Name",
+        "type": "string"
+      },
+      "password": {
+        "title": "Password",
+        "type": "string",
+        "minLength": 8
+      },
+      "apiKey": {
+        "title": "API key",
+        "type": "string"
+      },
+      "accountSecret": {
+        "title": "Account secret",
+        "type": "string",
+        "format": "password"
+      }
+    }
+  }
+}

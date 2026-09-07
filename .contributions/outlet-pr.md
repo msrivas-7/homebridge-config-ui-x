@@ -1,7 +1,11 @@
 # Fix saved names colliding between separate outlets
 
-Two outlets on different plugs can share a nameBasedUniqueId. The UI then restores the wrong custom name or drops an offline outlet from the saved layout.
+Two plugs can expose outlets with the same name identifier. The UI then restores the wrong custom name or drops the offline outlet from the saved layout.
 
-Scope name matching and merge keys to the bridge and serial number. Keep the existing unique ID fallback and Matter matching. Missing serials no longer count as evidence that two devices are the same.
+Scope name matching and layout merge keys to the bridge and serial number. Keep the unique ID fallback. Missing serials no longer count as evidence that two outlets belong to the same device.
 
-Verified: all 85 accessory service tests pass, including three new regressions that fail on the original source. The server and UI build, lint and merge checks pass. No backend or HomeKit pairing behavior changes.
+Verified with 85 accessory service tests, including three regressions that fail on the original source, plus build and lint. A Codex browser run with two virtual HAP plugs covers naming, reload, independent controls, saving while one plug is offline and reconnection. All accounts and devices in the test are synthetic.
+
+![Distinct names after reconnection](https://raw.githubusercontent.com/msrivas-7/homebridge-config-ui-x/dev/privacy-and-accessory-identity/.contributions/screenshots/outlet-names-after-reconnect.png)
+
+Happy to adjust the approach based on feedback.

@@ -1,0 +1,52 @@
+{
+  "sourceCommit": "9d2b3a51e10cca96f8039a67cf4b8bc76f98f036",
+  "state": {
+    "A": true,
+    "B": true,
+    "onlineB": true,
+    "commands": [
+      {
+        "plug": "A",
+        "value": true
+      },
+      {
+        "plug": "B",
+        "value": true
+      }
+    ]
+  },
+  "layout": {
+    "admin": [
+      {
+        "name": "Default Room",
+        "isDefault": true,
+        "services": [
+          {
+            "uniqueId": "1ed921e07b895d1f152ad58e2cd9dede1c269f059afb0e78de3099ba5678dafb",
+            "nameBasedUniqueId": "a95f4720cfbf9a6ef086bc767a204d6a0c976b18999257147aaededacf31c79c",
+            "name": "Outlet 1",
+            "serial": "BROWSER-PLUG-A",
+            "bridge": "0E:12:34:56:78:9A",
+            "aid": 2,
+            "iid": 8,
+            "uuid": "00000047-0000-1000-8000-0026BB765291",
+            "customName": "Desk Outlet",
+            "customType": "Outlet"
+          },
+          {
+            "uniqueId": "7c9a019680135f0d0e3b57689e98fb9e2c8425a4396153b31b69b4dfd15585ff",
+            "nameBasedUniqueId": "a95f4720cfbf9a6ef086bc767a204d6a0c976b18999257147aaededacf31c79c",
+            "name": "Outlet 1",
+            "serial": "BROWSER-PLUG-B",
+            "bridge": "0E:12:34:56:78:9A",
+            "aid": 3,
+            "iid": 8,
+            "uuid": "00000047-0000-1000-8000-0026BB765291",
+            "customName": "Lamp Power",
+            "customType": "Outlet"
+          }
+        ]
+      }
+    ]
+  }
+}
