@@ -1,17 +1,17 @@
 # Mask common secrets before opening the config editor
 
-JSON Config currently shows credentials as soon as the page opens. Add a preview that masks common secret fields, with an eye control to reveal and edit. Desktop keeps text labels; narrow screens use icons with accessible names. Hiding the editor keeps unsaved edits, including changes to a restored backup.
+Fixes #3010
 
-Keep the original config separate from the preview and block saves while it is masked. Invalid JSON shows a message instead of raw text. This is display masking, not encryption or complete redaction.
+JSON Config shows credentials as soon as it opens. Start with a read only preview that masks common secret fields with `********`. An eye control opens the existing editor. Desktop keeps text labels; narrow screens use icons with accessible names.
 
-Verified: 4,098 UI tests pass, plus build and lint. Browser checks cover reveal, editing, saving, reload, backup comparison and the unsaved changes prompt. A regression test catches lost backup edits when the comparison is recreated.
+Keep the original config separate from the preview and prevent saving while it is masked. Hiding and revealing retains unsaved edits, including edited backup comparisons. Invalid JSON shows a message instead of exposing raw text.
 
-Browser verification used a separate local admin, dummy credentials and isolated storage. It covered keyboard controls, a narrow viewport, save integrity, reload, backup edits and hidden unsaved changes.
+Verified with 93 focused tests on this branch, build and lint. All 4,104 UI tests pass with the three UI contributions combined. The Codex browser run covers keyboard controls, a narrow viewport, editing, save integrity, reload, backup comparison and unsaved changes. All data and accounts used for testing are synthetic.
 
-Masked preview:
+This is display masking. Unusual secret fields can be missed, and config.json, API responses, backups and logs remain unchanged.
 
-![Masked config preview](https://raw.githubusercontent.com/msrivas-7/homebridge-config-ui-x/dev/privacy-and-accessory-identity/.contributions/screenshots/config-masked.png)
+![Masked config preview](https://raw.githubusercontent.com/msrivas-7/homebridge-config-ui-x/71d51908/.contributions/screenshots/config-masked.png)
 
-Explicit reveal, with dummy values:
+![Explicit reveal with dummy values](https://raw.githubusercontent.com/msrivas-7/homebridge-config-ui-x/71d51908/.contributions/screenshots/config-revealed-dummy-values.png)
 
-![Revealed test config](https://raw.githubusercontent.com/msrivas-7/homebridge-config-ui-x/dev/privacy-and-accessory-identity/.contributions/screenshots/config-revealed-dummy-values.png)
+Happy to adjust the interaction or default behavior based on feedback.

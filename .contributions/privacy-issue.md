@@ -8,4 +8,4 @@ Show a preview with common secret fields masked, with a Reveal and edit button f
 
 This is a display feature. It does not encrypt config.json or protect API responses, backups or logs. Unusual secret fields still need manual review before sharing.
 
-Issue #2690 proposed a broader secret store and log redaction. This proposal is limited to the editor. A working implementation and tests are available on the fork; feedback on the default behavior would be useful before a PR.
+Issue #2690 proposed a broader secret store and log redaction. This proposal is limited to the editor. A working implementation and tests are available on the fork. Happy to adjust the default behavior based on feedback.

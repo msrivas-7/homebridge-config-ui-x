@@ -1,6 +1,12 @@
 # Contribution review
 
-The outlet fix is published as [issue #3008](https://github.com/homebridge/homebridge-config-ui-x/issues/3008) and [PR #3009](https://github.com/homebridge/homebridge-config-ui-x/pull/3009). The remaining changes are drafts and have not been submitted upstream.
+All three UI contributions have separate upstream issues and PRs:
+
+| Change | Issue | PR |
+| --- | --- | --- |
+| Outlet names | [#3008](https://github.com/homebridge/homebridge-config-ui-x/issues/3008) | [#3009](https://github.com/homebridge/homebridge-config-ui-x/pull/3009) |
+| JSON privacy preview | [#3010](https://github.com/homebridge/homebridge-config-ui-x/issues/3010) | [#3011](https://github.com/homebridge/homebridge-config-ui-x/pull/3011) |
+| Plugin secret inputs | [#3012](https://github.com/homebridge/homebridge-config-ui-x/issues/3012) | [#3013](https://github.com/homebridge/homebridge-config-ui-x/pull/3013) |
 
 ## Separate changes
 
@@ -15,7 +21,7 @@ Each branch starts from upstream bb94ef61 and contains one concern. The draft fi
 
 The contribution guide welcomes PRs and does not require an issue first. The bug template asks authors to search for duplicates. Searches found no exact match; #2307 is about HomeKit name propagation, and #2690 covers a broader secret store. Recheck before posting.
 
-The user authorized submitting one issue and its linked PR at a time. The outlet pair is open; keep the other contributions queued. Discuss the privacy default with maintainers before opening that feature PR. Link each PR to its own issue once a real issue number exists. Do not claim either PR implements encryption or fixes #2307 or #2690.
+The user authorized creating each issue followed by its PR. All three pairs are now open. Each PR includes verification, screenshots and an invitation for feedback. The privacy proposals are display features, not encryption or a replacement for the broader proposal in #2690.
 
 ## Verification
 
@@ -34,3 +40,5 @@ The combined branch passed all 4,104 UI tests after adding the plugin form contr
 Source review, tests and browser checks found no remaining defect in these changes. That is evidence for review readiness, not a guarantee that no bug can exist.
 
 PR #3009 is mergeable and contains only accessories.service.ts and its tests. The label workflows passed. GitHub confirms that Node Build is awaiting maintainer approval for the fork PR. Hosted build verification is still pending.
+
+All three PRs were checked after creation: the target is homebridge/homebridge-config-ui-x on latest, source branches match the verified commits, issue links are correct and GitHub reports no merge conflicts. Their Node Build runs report action_required; label workflows passed. Upstream CI and maintainer review remain pending.
